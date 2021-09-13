@@ -1,0 +1,85 @@
+.is-collapsible {
+  height: 0;
+  overflow-y: hidden;
+  transition: height 0.2s ease;
+}
+
+.is-collapsible.is-active {
+  height: auto;
+  transition: height 0.2s ease;
+}
+
+.playeravatar {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+}
+
+.§0 {
+  color: #000 !important;
+}
+
+.§1 {
+  color: #00a !important;
+}
+
+.§2 {
+  color: #0a0 !important;
+}
+
+.§3 {
+  color: #0aa !important;
+}
+
+.§4 {
+  color: #a00 !important;
+}
+
+.§5 {
+  color: #a0a !important;
+}
+
+.§6 {
+  color: #fa0 !important;
+}
+
+.§7 {
+  color: #aaa !important;
+}
+
+.§8 {
+  color: #555 !important;
+}
+
+.§9 {
+  color: #55f !important;
+}
+
+.§a {
+  color: #5f5 !important;
+}
+
+.§b {
+  color: #5ff !important;
+}
+
+.§c {
+  color: #f55 !important;
+}
+
+.§d {
+  color: #f5f !important;
+}
+
+.§e {
+  color: #ff5 !important;
+}
+
+.§f {
+  color: #fff !important;
+}
+
+em[data-emoji=":mojang:"]:before,
+em[data-emoji="mojang"]:before {
+  background-image: url(https://laby.net/texture/badge/629b36dc-5c0b-4a3c-85bf-ea111954f6fa.webp);
+  background-size: contain;
+}

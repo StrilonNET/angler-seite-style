@@ -1,0 +1,294 @@
+:root {
+    --ck-highlight-marker-blue: #72cdfd !important;
+    --ck-highlight-marker-green: #63f963 !important;
+    --ck-highlight-marker-pink: #fc7999 !important;
+    --ck-highlight-marker-yellow: #fdfd77 !important;
+    --ck-highlight-pen-green: #118800 !important;
+    --ck-highlight-pen-red: #e91313 !important;
+    --ck-image-style-spacing: 1.5em !important;
+    --ck-todo-list-checkmark-size: 16px
+}
+
+.ck-content .todo-list {
+    list-style: none
+}
+
+.ck-content .todo-list li {
+    margin-bottom: 5px
+}
+
+.ck-content .todo-list li .todo-list {
+    margin-top: 5px
+}
+
+.ck-content .todo-list .todo-list__label>input {
+    -webkit-appearance: none !important;
+    display: inline-block !important;
+    position: relative !important;
+    width: var(--ck-todo-list-checkmark-size) !important;
+    height: var(--ck-todo-list-checkmark-size) !important;
+    vertical-align: middle !important;
+    border: 0 !important;
+    left: -25px !important;
+    margin-right: -15px !important;
+    right: 0 !important;
+    margin-left: 0
+}
+
+.ck-content .todo-list .todo-list__label>input::before {
+    display: block !important;
+    position: absolute !important;
+    box-sizing: border-box !important;
+    content: '' !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: 1px solid #333 !important;
+    border-radius: 2px !important;
+    transition: 250ms ease-in-out box-shadow, 250ms ease-in-out background, 250ms ease-in-out border
+}
+
+.ck-content .todo-list .todo-list__label>input::after {
+    display: block !important;
+    position: absolute !important;
+    box-sizing: content-box !important;
+    pointer-events: none !important;
+    content: '' !important;
+    left: calc(var(--ck-todo-list-checkmark-size)/ 3) !important;
+    top: calc(var(--ck-todo-list-checkmark-size)/ 5.3) !important;
+    width: calc(var(--ck-todo-list-checkmark-size)/ 5.3) !important;
+    height: calc(var(--ck-todo-list-checkmark-size)/ 2.6) !important;
+    border-style: solid !important;
+    border-color: transparent !important;
+    border-width: 0 calc(var(--ck-todo-list-checkmark-size)/ 8) calc(var(--ck-todo-list-checkmark-size)/ 8) 0 !important;
+    transform: rotate(45deg)
+}
+
+.ck-content .todo-list .todo-list__label>input[checked]::before {
+    background: #25ab33 !important;
+    border-color: #25ab33
+}
+
+.ck-content .todo-list .todo-list__label>input[checked]::after {
+    border-color: #fff
+}
+
+.ck-content .todo-list .todo-list__label .todo-list__label__description {
+    vertical-align: middle
+}
+
+.ck-content .media {
+    clear: both !important;
+    margin: 1em 0 !important;
+    display: block !important;
+    min-width: 15em
+}
+
+.ck-content code {
+    background-color: hsla(0, 0%, 78%, .3) !important;
+    padding: .15em !important;
+    border-radius: 2px
+}
+
+.ck-content blockquote {
+    overflow: hidden !important;
+    padding-right: 1.5em !important;
+    padding-left: 1.5em !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-style: italic !important;
+    border-left: solid 5px #ccc
+}
+
+.ck-content[dir=rtl] blockquote {
+    border-left: 0 !important;
+    border-right: solid 5px #ccc
+}
+
+.ck-content .table {
+    margin: 1em auto !important;
+    display: table
+}
+
+.ck-content .table table {
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: 1px double #b2b2b2
+}
+
+.ck-content .table table td,
+.ck-content .table table th {
+    min-width: 2em !important;
+    padding: .4em !important;
+    border-color: #d8d8d8
+}
+
+.ck-content .table table th {
+    font-weight: 700 !important;
+    background: #f9f9f9
+}
+
+.ck-content .image>figcaption {
+    display: table-caption !important;
+    caption-side: bottom !important;
+    word-break: break-word !important;
+    color: #333 !important;
+    background-color: #f7f7f7 !important;
+    padding: .6em !important;
+    font-size: .75em !important;
+    outline-offset: -1px
+}
+
+.ck-content .image {
+    display: table !important;
+    clear: both !important;
+    text-align: center !important;
+    margin: 1em auto
+}
+
+.ck-content .image>img {
+    display: block !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    min-width: 50px
+}
+
+.ck-content .image.image_resized {
+    max-width: 100% !important;
+    display: block !important;
+    box-sizing: border-box
+}
+
+.ck-content .image.image_resized img {
+    width: 100%
+}
+
+.ck-content .image.image_resized>figcaption {
+    display: block
+}
+
+.ck-content .marker-yellow {
+    background-color: var(--ck-highlight-marker-yellow)
+}
+
+.ck-content .marker-green {
+    background-color: var(--ck-highlight-marker-green)
+}
+
+.ck-content .marker-pink {
+    background-color: var(--ck-highlight-marker-pink)
+}
+
+.ck-content .marker-blue {
+    background-color: var(--ck-highlight-marker-blue)
+}
+
+.ck-content .pen-red {
+    color: var(--ck-highlight-pen-red) !important;
+    background-color: transparent
+}
+
+.ck-content .pen-green {
+    color: var(--ck-highlight-pen-green) !important;
+    background-color: transparent
+}
+
+.ck-content .image-style-align-center,
+.ck-content .image-style-align-left,
+.ck-content .image-style-align-right,
+.ck-content .image-style-side {
+    max-width: 50%
+}
+
+.ck-content .image-style-side {
+    float: right !important;
+    margin-left: var(--ck-image-style-spacing)
+}
+
+.ck-content .image-style-align-left {
+    float: left !important;
+    margin-right: var(--ck-image-style-spacing)
+}
+
+.ck-content .image-style-align-center {
+    margin-left: auto !important;
+    margin-right: auto
+}
+
+.ck-content .image-style-align-right {
+    float: right !important;
+    margin-left: var(--ck-image-style-spacing)
+}
+
+.ck-content .page-break {
+    position: relative !important;
+    clear: both !important;
+    padding: 5px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center
+}
+
+.ck-content .page-break::after {
+    content: '' !important;
+    position: absolute !important;
+    border-bottom: 2px dashed #c4c4c4 !important;
+    width: 100%
+}
+
+.ck-content .page-break__label {
+    position: relative !important;
+    z-index: 1 !important;
+    padding: .3em .6em !important;
+    display: block !important;
+    text-transform: uppercase !important;
+    border: 1px solid #c4c4c4 !important;
+    border-radius: 2px !important;
+    font-family: Helvetica, Arial, Tahoma, Verdana, Sans-Serif !important;
+    font-size: .75em !important;
+    font-weight: 700 !important;
+    color: #333 !important;
+    background: #fff !important;
+    box-shadow: 2px 2px 1px hsla(0, 0%, 0%, .15) !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none
+}
+
+.ck-content hr {
+    border-width: 1px 0 0 !important;
+    border-style: solid !important;
+    border-color: #5e5e5e !important;
+    margin: 0
+}
+
+.ck-content pre {
+    padding: 1em !important;
+    color: #353535 !important;
+    background: hsla(0, 0%, 78%, .3) !important;
+    border: 1px solid #c4c4c4 !important;
+    border-radius: 2px !important;
+    text-align: left !important;
+    direction: ltr !important;
+    tab-size: 4 !important;
+    white-space: pre-wrap !important;
+    font-style: normal !important;
+    min-width: 200px
+}
+
+.ck-content pre code {
+    background: unset !important;
+    padding: 0 !important;
+    border-radius: 0
+}
+
+@media print {
+    .ck-content .page-break {
+        padding: 0
+    }
+    .ck-content .page-break::after {
+        display: none
+    }
+}
